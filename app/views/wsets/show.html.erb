@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reps:</strong>
+  <%= @wset.reps %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @wset.duration %>
+</p>
+
+<%= link_to 'Edit', edit_wset_path(@wset) %> |
+<%= link_to 'Back', wsets_path %>

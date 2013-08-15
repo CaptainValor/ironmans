@@ -1,1 +1,1 @@
-json.extract! @workout, :type, :created_at, :updated_at
+json.extract! @workout, :name, :created_at, :updated_at

@@ -1,0 +1,29 @@
+<h1>Listing wsets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reps</th>
+      <th>Duration</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wsets.each do |wset| %>
+      <tr>
+        <td><%= wset.reps %></td>
+        <td><%= wset.duration %></td>
+        <td><%= link_to 'Show', wset %></td>
+        <td><%= link_to 'Edit', edit_wset_path(wset) %></td>
+        <td><%= link_to 'Destroy', wset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wset', new_wset_path %>
