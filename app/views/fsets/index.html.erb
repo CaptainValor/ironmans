@@ -1,0 +1,29 @@
+<h1>Listing fsets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reps</th>
+      <th>Duration</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fsets.each do |fset| %>
+      <tr>
+        <td><%= fset.reps %></td>
+        <td><%= fset.duration %></td>
+        <td><%= link_to 'Show', fset %></td>
+        <td><%= link_to 'Edit', edit_fset_path(fset) %></td>
+        <td><%= link_to 'Destroy', fset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fset', new_fset_path %>
