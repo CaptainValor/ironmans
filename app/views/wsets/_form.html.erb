@@ -1,0 +1,25 @@
+<%= form_for(@wset) do |f| %>
+  <% if @wset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wset.errors.count, "error") %> prohibited this wset from being saved:</h2>
+
+      <ul>
+      <% @wset.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :reps %><br>
+    <%= f.number_field :reps %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
