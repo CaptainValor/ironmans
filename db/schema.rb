@@ -11,12 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130815000804) do
-
-  create_table "workouts", force: true do |t|
-    t.string   "type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20130815012022) do
 
 end
